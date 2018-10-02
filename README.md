@@ -10,6 +10,13 @@
 ## Getting Started
 
 clone the repo
+docker-compose up [--build possibly]
+If port 5432 is already busy, from command line:
+    sudo service postgresql stop
+
+
+Video Position:
+https://youtu.be/i_o5Jc-W9qM?t=19m5s
 
 ## Architecture
 
