@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_registration',  # CUSTOM
-    'budget',  # CUSTOM
+    'budget',  # CUSTOM: This is our project
+    'budgets',  # CUSTOM: This is our app
 ]
 
 MIDDLEWARE = [
@@ -131,8 +132,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Django Registration
 ACCOUNT_ACTIVATION_DAYS = 1
-LOGIN_REDIRECT_URL = '/board/category'
+LOGIN_REDIRECT_URL = '/'
 if DEBUG:
-    EMAIL_BACKEND = 'django.cor.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # else:
 #     Handle all of the configs for a real email SMTPBackend
