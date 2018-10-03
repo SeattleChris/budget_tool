@@ -1,0 +1,12 @@
+{% extends "generic/base.html" %}
+
+{% block content %}
+<h2> Budget Detail View</h2>
+<p> The following are transactions in this budget</p>
+<!-- <h2>{{ budget }}</h2>
+{% for transaction in transactions %}
+  {% if transaction.budget == budget %}
+  <p><a href="{% url "transaction_detail" id=transaction.id %}">{{ transaction.description }}</a></p>
+  {% endif %}
+{% endfor %} -->
+{% endblock content %}
