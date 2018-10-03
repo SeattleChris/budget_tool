@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {% comment %} <link rel="stylesheet" href="{% static "styles/reset.css" %}"> {% endcomment %}
-  {% comment %} <link rel="stylesheet" href="{% static "styles/base.css" %}"> {% endcomment %}
-  <title>Django Demo</title>
+  <!-- <link rel="stylesheet" href="{% static "styles/reset.css" %}"> -->
+  <!-- <link rel="stylesheet" href="{% static "styles/base.css" %}"> -->
+  <title>Budget Tool</title>
 </head>
 <body>
   <header>
     <nav>
       <li><a href="{% url "home" %}">home</a></li>
       {% if user.is_authenticated %}
-      <li><a href="{% url "logout" %}">item</a></li>
-      <li><a href="{% url "logout" %}">logout</a></li>
+      <li><a href="{% url "budget_list" %}">Budget List</a></li>
+      <li><a href="{% url "logout" %}">Logout</a></li>
       {% else %}
       <li><a href="{% url "django_registration_register" %}"> Register </a></li>
       <li><a href="{% url "login" %}">Login</a></li>
