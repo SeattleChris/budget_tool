@@ -1,0 +1,17 @@
+{% extends "generic/base.html" %}
+
+{% block content %}
+<h2> Create a Budget </h2>
+<p>
+  User selection is temporary for proof of life testing. It will be removed once
+  we are confirm we are attaching the current logged in user to the Budget created
+  here. Potentially could keep it an option for the superuser, which would allow them
+  to assign budgets to users (probably don't care enough to make this feature).
+</p>
+<!-- TODO: Remove above paragraph once confirmed implemented as desired  -->
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="save">
+</form>
+{% endblock content %}

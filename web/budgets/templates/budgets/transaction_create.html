@@ -1,0 +1,17 @@
+{% extends "generic/base.html" %}
+
+{% block content %}
+<h2> Create a Transaction </h2>
+<p>
+  Budget Selection is temporary for development. Will be removed once we confirm we
+  are passing the Budget that brought us here. Could be an option to keep it if we
+  also keep the base navigation link to this page. Then we would need to generate all
+  budgets that are valid for this user for the Selection box, and hide the box when add transaction is selected from a Budget.
+</p>
+<!-- TODO: Remove above paragraph once confirmed implemented as desired  -->
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="save">
+</form>
+{% endblock content %}
