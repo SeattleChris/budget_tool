@@ -1,5 +1,25 @@
 # Features Checklist
 
+## Code 38 - DRF
+
+- [ ] Create a new app in your project called budget_api
+Features in your budget_api app
+- [ ] Create a UserSerializer class for handling User model interactions through your API
+- [ ] Create a UserAPIView class for handling both a creation and retrieval of a User model instance
+- [ ] POST should accept valid inputs and create the new user and return that user data (without the password) to the client
+- [ ] POST should accept valid inputs for authentication and return a token to the client for subsequent authenticated requests to the API
+- [ ] Create a user/ endpoint to handle the class views for this portion of the API, and ensure that these endpoints are mounted to a base path of api/v1/ at the project root’s urls.py
+Testing
+- [ ] You are required to meet or exceed an 80% coverage benchmark for this application.
+- [ ] Your focus today is to integration test your API; specifically the new RESTful endpoints created for user registration and login
+General
+- [x] appropriate branch name
+- [x] Label directories, files, functions, classes, and methods as instructed or as appropriate
+- [x] Prepare Checklist to use with assignment completion
+- [ ] Write at least 3 test assertions
+- [x] Update README as appropriate
+
+
 ##Code 37 - Forms
 
 - [x] Construct views in your budgets application that allow the creation of Budget and Transaction instances
