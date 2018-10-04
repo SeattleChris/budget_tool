@@ -1,4 +1,25 @@
-### Features Checklist
+# Features Checklist
+
+##Code 37 - Forms
+
+- [x] Construct views in your budgets application that allow the creation of Budget and Transaction instances
+- [x] From the primary view of your budgets (list view), add a prominent button that allows for easy navigation to a form input for a new Budget
+- [x] From the detail view of any Budget instance, add a prominent button that allows for easy navigation to a form input for a new Transaction
+- [x] On successful New Budget form submission, return user Budget list
+- [ ] On successful New Transaction for submission, return user to Budget Detail view they had come from (just added to that Budget)
+Testing
+- [ ] You are required to meet or exceed an 80% coverage benchmark for this application.
+- [ ] You do not need to test the form inputs themselves; i.e. Selenium testing or some other headless browser test feature
+- [ ] You do need to unit test the endpoints, and additional view controller or model functionality
+- [ ] You do need to integration test the endpoints and req/res cycle throughout your application
+General
+- [x] appropriate branch name
+- [x] Label directories, files, functions, classes, and methods as instructed or as appropriate
+- [x] Prepare Checklist to use with assignment completion
+- [ ] Write at least 3 test assertions
+- [x] Update README as appropriate
+
+##Code 36 - Class Based Views
 
 - [x] Create a budgets application within the project
 - [x] Implement a Budget model for your application which should have the following attributes:
@@ -30,3 +51,6 @@ General
 - [ ] Write at least 3 test assertions
 - [ ] Ensure code is passing all tests
 - [x] Update README as appropriate
+
+
+

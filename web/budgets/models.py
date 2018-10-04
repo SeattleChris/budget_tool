@@ -14,7 +14,7 @@ class Budget(models.Model):
     name = models.CharField(max_length=180, default='Untitled')
     total_budget = models.FloatField()
     # TODO: ?? remaining_budget: Float (@property calculation)
-    remaining_budget = models.FloatField()
+    remaining_budget = models.FloatField(default=0.0)
     date_added = models.DateField(auto_now_add=True)
     date_modified = models.DateField(auto_now=True)
 
