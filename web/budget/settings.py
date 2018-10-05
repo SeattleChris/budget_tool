@@ -37,15 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',  # CUSTOM: user for ...
+    # 'corsheaders',  # CUSTOM: user for ...
     'django_registration',  # CUSTOM
     'budget',  # CUSTOM: This is our project
     'budgets',  # CUSTOM: This is our app
-    'budget_api',  # CUSTOM: our api
+    # 'budget_api',  # CUSTOM: our api
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',  # CUSTOM:
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -142,15 +142,15 @@ if DEBUG:
 #     Handle all of the configs for a real email SMTPBackend
 
 # Django REST Framework Settings
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
-    )
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.TokenAuthentication',
+#     )
+# }
 
-CORS_ORIGIN_WHITELIST = tuple(
-    os.environ.get(
-        'CORS_ORIGIN_WHITELIST',
-        'http://localhost:3000/',
-    ).split()
-)
+# CORS_ORIGIN_WHITELIST = tuple(
+#     os.environ.get(
+#         'CORS_ORIGIN_WHITELIST',
+#         'http://localhost:3000/',
+#     ).split()
+# )
