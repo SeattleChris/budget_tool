@@ -1,13 +1,15 @@
 # budget_tool
 
 **Author**: Chris L Chapman
-**Version**: 0.2.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Version**: 0.3.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
 
  scaffolding a new Django application to help manage some of your basic financials, though probably best to not put any actual data in here just yet! Your focus today is scaffolding, deployment and implementing the new class-based view controllers in place of function views.
 
 Includes form input templates, which will allow user to add new Budgets and Transactions
+
+Implementing a token-based authentication through the use of RESTful architecture. Your users will have the ability to register and login to your app through an endpoint provided by Django REST Framework.
 
 ## Getting Started
 
@@ -32,7 +34,6 @@ remove old stuff
     docker container rm [container id]
     docker image rm [image id]
     docker system prune
-
 
 ## Architecture
 
