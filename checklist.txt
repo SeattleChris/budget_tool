@@ -1,5 +1,18 @@
 # Features Checklist
 
+Different stages of the overall project.
+
+## Code 39 - More Django REST Framework
+
+In your budget_api app
+- [ ] Create a BudgetSerializer class for handling Budget model integrations through your API
+- [ ] Create a TransactionSerializer class for handling Transaction model interactions through your API
+- [ ] Each serializer class will have the ability to retrieve and create model instances respectively
+- [ ] Create budget/ and transaction/ endpoints to handle the class views for this portion of the API, and ensure that these endpoints are mounted to a base path of api/v1/ at the project root’s urls.py
+Testing
+- [ ] You are required to meet or exceed an 80% coverage benchmark for this application.
+- [ ] Your focus today is to integration test your API; specifically the new RESTful endpoints created for managing your Budget and Transaction resources as an authenticated user
+
 ## Code 38 - DRF
 
 - [ ] Create a new app in your project called budget_api

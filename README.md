@@ -11,6 +11,8 @@ Includes form input templates, which will allow user to add new Budgets and Tran
 
 Implementing a token-based authentication through the use of RESTful architecture. Your users will have the ability to register and login to your app through an endpoint provided by Django REST Framework.
 
+ Now that your application handles authentication through your RESTful endpoints, you will implement the ability to manage resources as an authenticated user!
+
 ## Getting Started
 
 clone the repo
