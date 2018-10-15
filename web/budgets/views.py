@@ -11,6 +11,7 @@ class BudgetListView(LoginRequiredMixin, ListView):
         aspects they want to track. We want to be able to see and select them.
     """
     template_name = 'budgets/budget_list.html'
+    model = Budget
     context_object_name = 'budgets'
     login_url = reverse_lazy('login')
 
@@ -24,7 +25,7 @@ class BudgetListView(LoginRequiredMixin, ListView):
         return context
 
     def get_queryset(self):
-        """ Associate the user for this Budget
+        """ We only want to list the Budgest owned by the current user.
         """
         return Budget.objects.filter(
             user__username=self.request.user.username)
@@ -38,11 +39,21 @@ class BudgetDetailView(LoginRequiredMixin, DetailView):
         transactions.
     """
     template_name = 'budgets/budget_detail.html'
-    context_object_name = 'transactions'
+    model = Transaction
+    context_object_name = 'transaction'
     login_url = reverse_lazy('login')
     pk_url_kwarg = 'id'
     # TODO: Need to manage when the budget has no items? Maybe Not really ...
     # Why does 'Food' not show correctly?
+
+    def get_context_data(self, **kwargs):
+        """ Get all transactions for this user (??)
+            May need additional filters or setup differently
+        """
+        context = super().get_context_data(**kwargs)
+        context['transactions'] = Transaction.objects.filter(
+            budget__user__username=self.request.user.username)
+        return context
 
     def get_queryset(self):
         """ Associate the user (or Budget?) for this Transaction
@@ -82,11 +93,14 @@ class TransactionCreateView(LoginRequiredMixin, CreateView):
     form_class = TransactionForm
     success_url = reverse_lazy('budget_list')
     login_url = reverse_lazy('login')
+    # pk_url_kwarg = 'id'
 
     def form_valid(self, form):
         """ Associate the Budget for this Transaction (currently set as user?)
         """
+        # form.instance.user = self.request.user
         form.instance.user = self.request.user
+        # form.instance.budget_id = self.pk_url_kwarg
         return super().form_valid(form)
 
     # Inherits .as_view(self):

@@ -5,7 +5,14 @@
 <h2>Your Budget Categories</h2>
 <h2><a href="{% url 'budget_create' %}">Button for Create A New Budget goes here</a></h2>
   {% for budget in budgets %}
-  <h3><a href="{% url 'budget_detail' id=budget.id %}">{{ budget }}</a></h3>
-  <p> PlaceHolder budget remain | Placeholder budget total</p>
+    <h3>{{ budget }}</h3>
+    <p> Belongs to user id: {{ budget.user.id }}</p>
+    <P> Username: {{ budget.user.username }}</P>
+    <p> {{ budget.remaining_budget }} | {{ budget.total_budget }}</p>
+    {% for transaction in transactions %}
+      {% if transaction.budget == budget %}
+        <p><a href="{% url 'budget_detail' id=transaction.id %}">{{ transaction.description }}</a></p>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 {% endblock content %}

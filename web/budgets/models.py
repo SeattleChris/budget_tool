@@ -30,8 +30,8 @@ class Transaction(models.Model):
         for the user on a specific declared Budget.
     """
     # id = auto-created.
-    assigned_to = models.ForeignKey(User, on_delete=models.CASCADE, related_name='transactions', null=True, blank=True)
-    budget = models.ForeignKey(Budget, on_delete=models.CASCADE, related_name='transactions')
+    # assigned_to = models.ForeignKey(User, on_delete=models.CASCADE, related_name='transactions', null=True, blank=True)
+    budget = models.ForeignKey(Budget, on_delete=models.CASCADE, related_name='transaction')
     description = models.TextField(blank=True, null=True)
     amount = models.FloatField()
     date_added = models.DateField(auto_now_add=True)
@@ -44,7 +44,7 @@ class Transaction(models.Model):
     type = models.CharField(
         max_length=16,
         choices=STATES,
-        default='Withdrawal'
+        default='WITHDRAWAL'
     )
 
     def __str__(self):

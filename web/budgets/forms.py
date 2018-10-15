@@ -8,8 +8,8 @@ class BudgetForm(ModelForm):
     """
     class Meta:
         model = Budget
-        fields = ['user', 'name', 'total_budget']
-        # user should be removed from fields once we are passing current user instead
+        fields = ['name', 'total_budget']
+
 
 class TransactionForm(ModelForm):
     """ Will generate a form for input on whichever fields we include.
@@ -17,5 +17,5 @@ class TransactionForm(ModelForm):
     """
     class Meta:
         model = Transaction
-        fields = ['budget', 'description', 'type', 'amount']
-        # budget should be removed from fields once we are passing correct budget
+        fields = ['description', 'type', 'amount']
+        # TODO: maybe budget should be removed from fields once we are passing correct budget
