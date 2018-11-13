@@ -32,7 +32,7 @@ General
 - [ ] Write at least 3 test assertions
 - [x] Update README as appropriate
 
-    
+
 ##Code 37 - Forms
 
 - [x] Construct views in your budgets application that allow the creation of Budget and Transaction instances
@@ -56,12 +56,12 @@ General
 
 - [x] Create a budgets application within the project
 - [x] Implement a Budget model for your application which should have the following attributes:
-- [ ] id: Primary Key / Integer
+- [x] id: Primary Key / Integer
 - [x] name: String
 - [x] total_budget: Float
 - [x] remaining_budget: Float (@property calculation)
 - [x] Implement a Transaction model for your application which should have the following attributes:
-- [ ] id: Primary Key / Integer
+- [x] id: Primary Key / Integer
 - [x] budget: ForeignKey(Budget)
 - [x] type: Choices(withdrawal, deposit)
 - [x] amount: Float
@@ -70,7 +70,7 @@ Create class views for this application:
 - [x] BudgetListView: List all available budgets owned by current user
 - [x] BudgetDetailView: List all available transactions within the selected budget
 - [x] Create a template for each of the above view controllers
-- [ ] Configure the application’s urls with the projects urls
+- [x] Configure the application’s urls with the projects urls
 - [ ] Ensure that your site is styled, and that you are managing any other static assets appropriately
 Testing
 - [ ] You are required to meet or exceed an 80% coverage benchmark for this application

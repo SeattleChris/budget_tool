@@ -17,5 +17,5 @@ class TransactionForm(ModelForm):
     """
     class Meta:
         model = Transaction
-        fields = ['description', 'type', 'amount']
+        fields = ['budget', 'description', 'type', 'amount']
         # TODO: maybe budget should be removed from fields once we are passing correct budget

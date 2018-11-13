@@ -42,6 +42,3 @@ docker container rm [container id]
 docker image rm [image id]
 docker system prune
 
-## Architecture
-
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. This is also an area which you can include any visuals; flow charts, example usage gifs, screen captures, etc.-->

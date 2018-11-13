@@ -93,14 +93,13 @@ class TransactionCreateView(LoginRequiredMixin, CreateView):
     form_class = TransactionForm
     success_url = reverse_lazy('budget_list')
     login_url = reverse_lazy('login')
-    # pk_url_kwarg = 'id'
+    pk_url_kwarg = 'id'
 
     def form_valid(self, form):
         """ Associate the Budget for this Transaction (currently set as user?)
         """
-        # form.instance.user = self.request.user
         form.instance.user = self.request.user
-        # form.instance.budget_id = self.pk_url_kwarg
+        # form.instance.budget_id = self.request.pk_url_kwarg
         return super().form_valid(form)
 
     # Inherits .as_view(self):

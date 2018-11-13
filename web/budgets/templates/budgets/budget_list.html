@@ -9,6 +9,7 @@
     <p> Belongs to user id: {{ budget.user.id }}</p>
     <P> Username: {{ budget.user.username }}</P>
     <p> {{ budget.remaining_budget }} | {{ budget.total_budget }}</p>
+    <h4><a href="{% url 'transaction_create' id=budget.id %}">Create a Transaction in this Budget</a></h4>
     {% for transaction in transactions %}
       {% if transaction.budget == budget %}
         <p><a href="{% url 'budget_detail' id=transaction.id %}">{{ transaction.description }}</a></p>
