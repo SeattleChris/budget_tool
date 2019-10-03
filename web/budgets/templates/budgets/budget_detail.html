@@ -1,10 +1,9 @@
 {% extends "generic/base.html" %}
 
 {% block content %}
-<h2> Budget Detail View</h2>
-<p>
-  Placeholder for transactions in this budget.
-  This currently does not display any details from DB.
-</p>
-<h2><a href="{% url 'transaction_create' %}">Prominent button for Create A Transaction goes here</a></h2>
+<h2>{{ transaction.budget.name }} | {{ transaction.budget.id }} </h2>
+<h3>
+  {{ transaction.description }} ({{ transaction.amount }} | {{ transaction.type}})
+</h3>
+<h2><a href="{% url 'transaction_create' id=transaction.budget.id %}">Prominent button for Create A Transaction goes here</a></h2>
 {% endblock content %}

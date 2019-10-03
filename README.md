@@ -11,30 +11,34 @@ Includes form input templates, which will allow user to add new Budgets and Tran
 
 Implementing a token-based authentication through the use of RESTful architecture. Your users will have the ability to register and login to your app through an endpoint provided by Django REST Framework.
 
+ Now that your application handles authentication through your RESTful endpoints, you will implement the ability to manage resources as an authenticated user!
+
 ## Getting Started
 
 clone the repo
-Start it up
-    docker-compose up [--build possibly]
-If port 5432 is already busy, from command line:
-    sudo service postgresql stop
-If changes in Models, maybe Views, or Static need a new build
-    docker-compose down
-    docker-compose up --build
-If changes in simpliar stuff
-    docker-compose down
-    docker-compose up
-To see what is still around from previous builds
-    docker container ls -a
-    docker images ls
-    docker system df
-remove old stuff
-    docker container prune
-    docker image prune {removes unattached images}
-    docker container rm [container id]
-    docker image rm [image id]
-    docker system prune
+    start a virtual enviroment
+pipenv shell [or whatever virt env you prefer]
+Change Time Zone as desired in the settings.py file, eg: TIME_ZONE = 'America/Los_Angeles'
+    To start it up
+docker-compose up [--build possibly]
+    If port 5432 is already busy, from command line:
+sudo service postgresql stop
+    If requirements are not up to date:
+pip freeze > requirements.txt
+    If changes in Models, maybe Views, or Static need a new build
+docker-compose down
+docker-compose up --build
+    If changes in simpliar stuff
+docker-compose down
+docker-compose up
+    To see what is still around from previous builds
+docker container ls -a
+docker images ls
+docker system df
+    remove old stuff
+docker container prune
+docker image prune {removes unattached images}
+docker container rm [container id]
+docker image rm [image id]
+docker system prune
 
-## Architecture
-
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. This is also an area which you can include any visuals; flow charts, example usage gifs, screen captures, etc.-->
