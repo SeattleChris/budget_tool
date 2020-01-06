@@ -18,7 +18,7 @@ Pygments==2.2.0
 python-dateutil==2.7.3
 pytz==2018.5
 rcssmin==1.0.6
-requests==2.20.0
+requests==2.22.0
 rjsmin==1.0.12
 six==1.11.0
 text-unidecode==1.2
